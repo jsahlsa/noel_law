@@ -1,0 +1,21 @@
+main {
+  position: relative;
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    position: relative;
+    margin-left: 10%;
+    top: 40%;
+  }
+  h1 {
+    font-family: $header-font;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h3 {
+    font-family: $body-font;
+    margin: 0;
+  }
+}
