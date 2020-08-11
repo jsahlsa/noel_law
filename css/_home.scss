@@ -1,11 +1,9 @@
 main {
   position: relative;
   .banner {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
+    display: block;
     position: relative;
-    margin-left: 10%;
+    margin: 0 15em 0 10em;
     top: 40%;
   }
   h1 {
@@ -13,9 +11,34 @@ main {
     font-size: 3em;
     text-transform: uppercase;
     margin: 0;
+    box-shadow: $secondary-color 0 3px;
   }
   h3 {
     font-family: $body-font;
-    margin: 0;
+    margin: 5px 0;
+  }
+}
+
+//smaller screens
+@media screen and (max-width: 768px) {
+  main {
+    position: relative;
+    .banner {
+      display: block;
+      position: relative;
+      margin: 0 5em 0 2.5em;
+      top: 40%;
+    }
+    h1 {
+      font-family: $header-font;
+      font-size: 3em;
+      text-transform: uppercase;
+      margin: 0;
+      box-shadow: $secondary-color 0 3px;
+    }
+    h3 {
+      font-family: $body-font;
+      margin: 5px 0;
+    }
   }
 }

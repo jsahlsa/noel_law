@@ -1,6 +1,5 @@
 nav {
   display: flex;
-  background: $light-gray;
   justify-content: right;
   align-content: center;
   width: 100vw;
@@ -10,26 +9,40 @@ nav {
     justify-content: right;
     list-style: none;
     flex-direction: row;
-    margin: 0 2em 0 auto;
-    border: solid 1px black;
+    margin: 0 0 0 auto;
 
 
     li {
       margin: 0 auto;
-      min-width: 8em;
       display: flex;
       justify-content: center;
-      border: solid 1px black;
+      margin-right: 2em;
 
       a {
-        color: $dark-gray;
+        background: $dark-gray;
+        align-self: center;
+        color: white;
         font-family: $body-font;
-        padding: 1em 0;
+        padding: .2em .5em;
+        box-shadow: $secondary-color 0 3px;
         text-decoration: none;
         text-transform: uppercase;
         font-size: .8em;
         white-space: nowrap;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: gold 0 3px;
+        }
       }
     }
   }
 }
+
+#top-logo {
+  max-width: 15em;
+  min-width: 8em;
+  padding: .5em 0 0 1em;
+}
+
+//@media 820
