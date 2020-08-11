@@ -1,0 +1,37 @@
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.page {
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+  section {
+}
+
+section {
+  background: $dark-gray;
+}
+
+h2 {
+  font-family: $header-font;
+  color: white;
+  padding: 10px;
+  font-size: 2em;
+  margin: 0 40% 0 10%;
+  border-bottom: $secondary-color solid 10px;
+  border-radius: 10px 0 10px 0;
+  //box-shadow: inset 2px -2px 2px $primary-color;
+}
+
+p {
+  font-family: $body-font;
+  color: $light-gray;
+  font-size: 1.1em;
+  text-indent: 2em;
+  line-height: 1.8em;
+  padding: 0 30px 30px 30px;
+}

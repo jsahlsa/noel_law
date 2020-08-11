@@ -3,27 +3,29 @@
 nav {
   display: flex;
   background: #ebebeb;
-  justify-content: space-around;
+  justify-content: right;
   align-content: center;
   width: 100vw;
 }
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
   list-style: none;
   flex-direction: row;
-  margin-right: 5em;
-  min-width: 20%;
+  margin: 0 2em 0 auto;
+  border: solid 1px black;
 }
 nav ul li {
-  margin-left: 2em;
-  min-width: 5em;
+  margin: 0 auto;
+  min-width: 8em;
   display: flex;
   justify-content: center;
+  border: solid 1px black;
 }
 nav ul li a {
   color: #333333;
   font-family: "Noto Sans TC", sans-serif;
+  padding: 1em 0;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -52,12 +54,43 @@ main h3 {
   margin: 0;
 }
 
-* {
-  border: 1px solid black;
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.page {
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+
+section {
+  background: #333333;
+}
+
+h2 {
+  font-family: "Noto Serif", serif;
+  color: white;
+  padding: 10px;
+  font-size: 2em;
+  margin: 0 40% 0 10%;
+  border-bottom: #941320 solid 10px;
+  border-radius: 10px 0 10px 0;
+}
+
+p {
+  font-family: "Noto Sans TC", sans-serif;
+  color: #ebebeb;
+  font-size: 1.1em;
+  text-indent: 2em;
+  line-height: 1.8em;
+  padding: 0 30px 30px 30px;
 }
 
 main {
-  background: #941320;
+  background: top/cover no-repeat url(../img/main_bg_bw.jpg) #941320;
   height: 100vh;
 }
 
