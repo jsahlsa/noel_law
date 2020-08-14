@@ -14,10 +14,12 @@
 
 .hamRotate.active {
   transform: rotate(45deg);
+  stroke: white;
 }
 
 .hamRotate180.active {
   transform: rotate(180deg);
+  stroke: white;
 }
 
 .line {
@@ -38,10 +40,16 @@
 
 .ham1.active .top {
   stroke-dashoffset: -98px;
+  stroke: white;
 }
 
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
+  stroke: white;
+}
+
+.ham1.active .line {
+  stroke: white;
 }
 
 #hamnav {
@@ -94,24 +102,31 @@
 @media screen and (max-width: 768px) {
   /* Show Hamburger Icon */
   #hamitems {
+    display: flex;
     margin-top: 0px;
     position: fixed;
+    width: 100vw;
+  }
+
+  #hamitems li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
   }
 
   /* Break down menu items into vertical */
   #hamitems li a {
     box-sizing: border-box;
-    display: block;
-    width: 100vw;
     text-align: center;
-    border-top: 2px solid #ebebeb;
+    box-shadow: white 0px 3px;
     background: #941320;
-    padding: 0.75em;
+    padding: 0.5em 5em;
     margin: auto;
     font-size: 1em;
   }
   #hamitems li a:hover {
-    background: #333333;
+    box-shadow: gold 0px 3px;
   }
 
   #hamnav label {
@@ -134,6 +149,9 @@
 
   #hamnav input:checked ~ #hamitems {
     display: block;
+    z-index: 98;
+    background: #941320;
+    height: 100vh;
   }
 }
 main {

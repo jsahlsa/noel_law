@@ -12,9 +12,11 @@
 }
 .hamRotate.active {
   transform: rotate(45deg);
+  stroke: white;
 }
 .hamRotate180.active {
   transform: rotate(180deg);
+  stroke: white;
 }
 .line {
   fill:none;
@@ -31,9 +33,14 @@
 }
 .ham1.active .top {
   stroke-dashoffset: -98px;
+  stroke: white;
 }
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
+  stroke: white;
+}
+.ham1.active .line {
+    stroke: white;
 }
 
 #hamnav {
@@ -87,8 +94,17 @@
 
 
   #hamitems {
+    display: flex;
     margin-top: 0px;
     position: fixed;
+    width: 100vw;
+  }
+
+  #hamitems li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
   }
 
 
@@ -96,18 +112,16 @@
   /* Break down menu items into vertical */
   #hamitems li a {
     box-sizing: border-box;
-    display: block;
-    width: 100vw;
     text-align: center;
-    border-top: 2px solid $light-gray;
+    box-shadow: white 0px 3px;
     background: $secondary-color;
-    padding: .75em;
+    padding: .5em 5em;
     margin: auto;
     font-size: 1em;
 
 
     &:hover {
-      background: $dark-gray
+      box-shadow: gold 0px 3px;
     }
   }
   #hamnav label {
@@ -126,5 +140,10 @@
 
   /* Toggle Show/Hide Menu */
   #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+    z-index: 98;
+    background: $secondary-color;
+    height: 100vh;
+  }
 }
