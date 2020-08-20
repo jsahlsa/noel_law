@@ -57,16 +57,16 @@
             d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
         </svg>
       </label>
-      <input type="checkbox" id="hamburger"/>
+      <input type="checkbox" name ="hamburger" id="hamburger"/>
       <span class="logo home">
         <a href ""><img id="top-logo" src="img/logo.png"></a>
       </span>
 
       <!-- [MENU ITEMS] -->
       <ul id="hamitems">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about_us">About Us</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a id="services_link" href="#services">Services</a></li>
+        <li><a id="about_us_link" href="#about_us">About Us</a></li>
+        <li><a id="contact_link" href="#contact">contact</a></li>
       </ul>
     </nav>
     <!-- Main call to action -->
@@ -103,7 +103,39 @@
       </section>
     </div>
   </div>
-
+  <script>
+    // Get a reference to "myhref".
+    var myhref = document.getElementById("services_link");
+    // Get a reference to "myfield".
+    var myfield = document.getElementById("hamburger");
+    // Attach an event listener to "myhref", which gets notifier when "myhref" is clicked.
+    myhref.addEventListener("click", function() {
+        // "myhref" is click. So, uncheck "myfield"
+        myfield.checked = false;
+    });
+  </script>
+  <script>
+    // Get a reference to "myhref".
+    var myhref2 = document.getElementById("about_us_link");
+    // Get a reference to "myfield".
+    var myfield = document.getElementById("hamburger");
+    // Attach an event listener to "myhref", which gets notifier when "myhref" is clicked.
+    myhref2.addEventListener("click", function() {
+        // "myhref" is click. So, uncheck "myfield"
+        myfield.checked = false;
+    });
+  </script>
+  <script>
+    // Get a reference to "myhref".
+    var myhref3 = document.getElementById("contact_link");
+    // Get a reference to "myfield".
+    var myfield = document.getElementById("hamburger");
+    // Attach an event listener to "myhref", which gets notifier when "myhref" is clicked.
+    myhref3.addEventListener("click", function() {
+        // "myhref" is click. So, uncheck "myfield"
+        myfield.checked = false;
+    });
+  </script>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
