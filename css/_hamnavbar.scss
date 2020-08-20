@@ -40,9 +40,8 @@
   stroke: white;
 }
 .ham1.active .line {
-    stroke: white;
+  stroke: white;
 }
-
 #hamnav {
   width: 100%;
   display: flex;
@@ -142,8 +141,9 @@
   #hamitems { display: none; }
   #hamnav input:checked ~ #hamitems {
     display: block;
+    opacity: 95%;
     z-index: 98;
     background: $secondary-color;
-    height: 100vh;
+    height: 80vh;
   }
 }
