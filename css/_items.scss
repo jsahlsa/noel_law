@@ -29,6 +29,14 @@ p {
   padding: 0 30px 30px 30px;
 }
 
+.contact_info.send_contact {
+  text-decoration: none;
+  color: $light-gray;
+  background: $secondary-color;
+  padding: 1em;
+  border-radius: 10px;
+}
+
 // smaller screens
 @media screen and (max-width: 768px) {
   .page {
