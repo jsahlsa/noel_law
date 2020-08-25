@@ -219,20 +219,24 @@ h2 {
   border-bottom: #941320 solid 3px;
 }
 
-p {
+.info p {
   font-family: "Noto Sans TC", sans-serif;
   color: #333333;
   font-size: 1.1em;
   line-height: 1.8em;
-  padding: 0 30px 30px 30px;
 }
 
-.contact_info.send_contact {
-  text-decoration: none;
-  color: #ebebeb;
-  background: #941320;
+contact_wrapper {
+  display: flex;
+}
+
+#contact_wrapper p {
+  border-left: #941320 2px solid;
+  border-bottom: #941320 2px solid;
   padding: 1em;
-  border-radius: 10px;
+  text-decoration: none;
+  color: #333333;
+  max-width: 50%;
 }
 
 @media screen and (max-width: 768px) {
@@ -241,6 +245,10 @@ p {
     margin: 20px auto 0 auto;
   }
 }
+* {
+  border: 1px solid black;
+}
+
 main {
   background: top/cover no-repeat url(../img/main_bg_bw.jpg) #941320;
   height: 100vh;
