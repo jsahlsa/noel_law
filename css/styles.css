@@ -1,158 +1,166 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif:700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
-/* [ON BIG SCREEN] */
-/* Wrapper */
-.ham {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.hamRotate.active {
-  transform: rotate(45deg);
-  stroke: white;
-}
-
-.hamRotate180.active {
-  transform: rotate(180deg);
-  stroke: white;
-}
-
-.line {
-  fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #000;
-  stroke-width: 5.5;
-  stroke-linecap: round;
-}
-
-.ham1 .top {
-  stroke-dasharray: 40 139;
-}
-
-.ham1 .bottom {
-  stroke-dasharray: 40 180;
-}
-
-.ham1.active .top {
-  stroke-dashoffset: -98px;
-  stroke: white;
-}
-
-.ham1.active .bottom {
-  stroke-dashoffset: -138px;
-  stroke: white;
-}
-
-.ham1.active .line {
-  stroke: white;
-}
-
-#hamnav {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
-
-/* Hide Hamburger */
-#hamnav label, #hamburger {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+#closeIcon {
   display: none;
 }
 
-/* Horizontal Menu Items */
-#hamitems {
-  list-style: none;
+ul {
   display: flex;
-}
-
-#top-logo {
-  max-width: 15em;
-  min-width: 8em;
-  padding: 0.5em 0 0 1em;
-  left: 0;
-  position: absolute;
-}
-
-#hamitems a {
   justify-content: flex-end;
-  background: #333333;
-  align-self: center;
-  color: white;
-  font-family: "Noto Sans TC", sans-serif;
-  padding: 0.2em 0.5em;
-  box-shadow: #941320 0 3px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  white-space: nowrap;
-  margin-right: 2em;
+  list-style: none;
 }
 
-#hamitems a:hover {
+ul a {
+  display: flex;
+  margin-right: 3em;
+  background: #333333;
+  padding: 0.5em 0.7em;
+  box-shadow: 0 3px #941320;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  color: #ebebeb;
+  transition: background 1s, color 0.5s, box-shadow 0.5s, transform 0.5s;
+}
+ul a:hover {
   background: #ebebeb;
   color: #333333;
+  box-shadow: 0 3px gold;
+  transform: scale(1.1);
 }
 
-/* [ON SMALL SCREENS] */
 @media screen and (max-width: 768px) {
-  /* Show Hamburger Icon */
-  #hamitems {
+  #menuToggle {
     display: flex;
-    margin-top: 0px;
+    flex-flow: column;
     position: fixed;
-    width: 100vw;
+    top: 2em;
+    right: 2em;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
-  #hamitems li {
+  #menuToggle input {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-  }
-
-  /* Break down menu items into vertical */
-  #hamitems li a {
-    box-sizing: border-box;
-    text-align: center;
-    box-shadow: white 0px 3px;
-    background: #941320;
-    padding: 0.5em 5em;
-    margin: auto;
-    font-size: 1em;
-  }
-  #hamitems li a:hover {
-    box-shadow: gold 0px 3px;
-  }
-
-  #hamnav label {
-    display: inline-block;
-    color: #333333;
-    font-style: normal;
-    font-size: 2.5em;
-    padding: 0.1em 0.2em;
+    width: 40px;
+    height: 32px;
     position: fixed;
-    z-index: 99;
-  }
-  #hamnav label:hover {
-    color: #ebebeb;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
   }
 
-  /* Toggle Show/Hide Menu */
-  #hamitems {
-    display: none;
-  }
-
-  #hamnav input:checked ~ #hamitems {
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
     display: block;
-    opacity: 95%;
-    z-index: 98;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
     background: #941320;
-    height: 80vh;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(8px, -1px);
+    background: gold;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(2px, 8px);
+  }
+
+  /* This is the pop out menu
+   * Make this absolute positioned
+   * at the top right of the screen
+   */
+  #menu {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    height: 120vh;
+    background: rgba(148, 19, 32, 0.9);
+    margin: -5em 0 0 5em;
+    width: 20em;
+    padding: 5em 0;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    /* this part affects final destination of menu */
+    transform: translate(0, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    margin: 1em;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    font-size: 22px;
+  }
+
+  #menu a {
+    display: flex;
+    width: 100%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    box-shadow: 0 3px #941320;
+    background: #333333;
+    font-family: "Noto Sans", sans-serif;
+    color: #ebebeb;
+    transition: background 0.5s, transform 0.5s, color 0.5s, box-shadow 0.5s;
+  }
+  #menu a:hover {
+    background: #ebebeb;
+    color: #333333;
+    box-shadow: 0 3px gold;
+    transform: scale(1.05);
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: translate(-100%, 0);
   }
 }
 main {
@@ -172,7 +180,7 @@ main h1 {
   box-shadow: #941320 0 3px;
 }
 main h3 {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   margin: 5px 0;
 }
 
@@ -194,7 +202,7 @@ main h3 {
     box-shadow: #941320 0 3px;
   }
   main h3 {
-    font-family: "Noto Sans TC", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     margin: 5px 0;
   }
 }
@@ -220,7 +228,7 @@ h2 {
 }
 
 .info p {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   color: #333333;
   font-size: 1.1em;
   line-height: 1.8em;
@@ -243,6 +251,86 @@ contact_wrapper {
   .page {
     width: 90%;
     margin: 20px auto 0 auto;
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  padding-bottom: 20px;
+}
+
+.footer_div {
+  display: flex;
+  flex-flow: column;
+  min-width: 33%;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo_footer_wrapper {
+  width: 6em;
+}
+
+.st0 {
+  fill: white;
+}
+
+a, p {
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  color: #ebebeb;
+}
+
+.footer_links {
+  padding: 0.5em;
+  box-shadow: 0 3px #941320;
+  text-transform: uppercase;
+  margin: 0.7em 0;
+  transition: box-shadow 0.5s, transform 0.2s;
+}
+.footer_links:hover {
+  box-shadow: 0 3px gold;
+  transform: translateY(0.2em);
+}
+.footer_links:active {
+  transform: translateY(0em);
+}
+
+.footer_contact_info {
+  font-size: 0.9em;
+}
+
+.footer_button {
+  background: #941320;
+  padding: 0.7em;
+  margin-bottom: 0.6em;
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 1px #333333;
+  transition: transform 0.2s, background 0.5s, box-shadow 0.5s;
+  text-transform: uppercase;
+}
+.footer_button:hover {
+  background: rgba(148, 19, 32, 0.5);
+  transform: translateY(0.2em);
+}
+.footer_button:active {
+  transform: translateY(0em);
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-flow: column;
+    padding-top: 20px;
+  }
+
+  .footer_div {
+    padding: 2em;
+  }
+
+  #logo_footer_wrapper {
+    width: 40%;
   }
 }
 * {
