@@ -21,16 +21,16 @@ ul a {
   text-decoration: none;
   font-family: "Noto Sans", sans-serif;
   color: #ebebeb;
-  transition: background 1s, color 0.5s, box-shadow 0.5s, transform 0.5s;
+  transition: background 1s, color 0.5s, box-shadow 0.5s, transform 0.2s;
 }
 ul a:hover {
   background: #ebebeb;
   color: #333333;
   box-shadow: 0 3px gold;
-  transform: scale(1.1);
+  transform: translateY(0.2em);
 }
 
-.logo_bg_top {
+#logo_top {
   fill: #333333;
 }
 
@@ -38,7 +38,7 @@ ul a:hover {
   fill: #ebebeb;
 }
 
-#logo_top_bg {
+#logo_top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@ ul a:hover {
   margin: -40px 0 0 5em;
   transition: all 0.5s ease-in;
 }
-#logo_top_bg:hover {
+#logo_top:hover {
   transform: translateY(1em) scale(1.1);
 }
 
@@ -78,9 +78,10 @@ ul a:hover {
     -webkit-touch-callout: none;
   }
 
-  .logo_top_bg {
+  #logo_top {
     opacity: 1;
-    width: 20%;
+    width: 7em;
+    margin: -30px 0 0 5em;
   }
 
   /*
@@ -114,7 +115,7 @@ ul a:hover {
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(8px, -1px);
-    background: gold;
+    background: #333333;
   }
 
   /*
@@ -146,7 +147,7 @@ ul a:hover {
     background: rgba(148, 19, 32, 0.9);
     margin: -5em 0 0 5em;
     width: 20em;
-    padding: 5em 0;
+    padding: 6em 0;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -173,13 +174,13 @@ ul a:hover {
     background: #333333;
     font-family: "Noto Sans", sans-serif;
     color: #ebebeb;
-    transition: background 0.5s, transform 0.5s, color 0.5s, box-shadow 0.5s;
+    transition: background 0.5s, transform 0.2s, color 0.5s, box-shadow 0.5s;
   }
   #menu a:hover {
     background: #ebebeb;
     color: #333333;
     box-shadow: 0 3px gold;
-    transform: scale(1.05);
+    transform: translateY(0.2em);
   }
 
   /*
@@ -277,6 +278,51 @@ contact_wrapper {
   .page {
     width: 90%;
     margin: 20px auto 0 auto;
+  }
+}
+form {
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+form label {
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  padding: 2em 0 0 0;
+}
+form .form_input_area {
+  margin: 0.5em 0 0 0;
+  background: #ebebeb;
+  border: solid 1px #333333;
+  opacity: 70%;
+}
+form button {
+  background: #941320;
+  padding: 0.7em;
+  width: 30%;
+  margin-bottom: 0.6em;
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 1px #333333;
+  transition: transform 0.2s, background 0.5s, box-shadow 0.5s;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  color: #ebebeb;
+  margin: 1em 0 0 0;
+}
+form button:hover {
+  background: rgba(148, 19, 32, 0.5);
+  transform: translateY(0.2em);
+}
+
+@media screen and (max-width: 768px) {
+  form label {
+    width: 80%;
   }
 }
 footer {

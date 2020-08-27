@@ -20,24 +20,24 @@ ul a {
   text-decoration: none;
   font-family: $body-font;
   color: $light-gray;
-  transition: background 1s, color .5s, box-shadow .5s, transform .5s;
+  transition: background 1s, color .5s, box-shadow .5s, transform .2s;
 
   &:hover {
     background: $light-gray;
     color: $dark-gray;
     box-shadow: 0 3px gold;
-    transform: scale(1.1);
+    transform: translateY(.2em);
   }
 }
 
-.logo_bg_top {
+#logo_top {
   fill: $dark-gray;
 }
 .st1 {
   fill: $light-gray;
 }
 
-#logo_top_bg {
+#logo_top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,9 +90,10 @@ ul a {
   -webkit-touch-callout: none;
 }
 
-.logo_top_bg {
+#logo_top {
   opacity: 1;
-  width: 20%;
+  width: 7em;
+  margin: -30px 0 0 5em;
 }
 
 /*
@@ -136,7 +137,7 @@ ul a {
 {
   opacity: 1;
   transform: rotate(45deg) translate(8px, -1px);
-  background: gold;
+  background: $dark-gray;
 
 }
 
@@ -173,7 +174,7 @@ ul a {
   margin: -5em 0 0 5em;
 
   width: 20em;
-  padding: 5em 0;
+  padding: 6em 0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -203,13 +204,13 @@ ul a {
   background: $dark-gray;
   font-family: $body-font;
   color: $light-gray;
-  transition: background .5s, transform .5s, color .5s, box-shadow .5s;
+  transition: background .5s, transform .2s, color .5s, box-shadow .5s;
 
   &:hover {
     background: $light-gray;
     color: $dark-gray;
     box-shadow: 0 3px gold;
-    transform: scale(1.05);
+    transform: translateY(.2em);
   }
 }
 
