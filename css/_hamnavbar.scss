@@ -30,6 +30,27 @@ ul a {
   }
 }
 
+.logo_bg_top {
+  fill: $dark-gray;
+}
+.st1 {
+  fill: $light-gray;
+}
+
+#logo_top_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 120px;
+  margin: -40px 0 0 5em;
+  transition: all .5s ease-in;
+
+&:hover {
+  transform: translateY(1em) scale(1.1);
+}
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -67,6 +88,11 @@ ul a {
   z-index: 2; /* and place it over the hamburger */
 
   -webkit-touch-callout: none;
+}
+
+.logo_top_bg {
+  opacity: 1;
+  width: 20%;
 }
 
 /*
