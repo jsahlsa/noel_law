@@ -9,16 +9,34 @@ $light-gray: #ebebeb;
 $dark-gray: #333333;
 $header-font: 'Noto Serif', serif;
 $body-font: 'Noto Sans', sans-serif;
+ 
 
-@import 'hamnavbar';
 @import 'home';
 @import 'items';
+@import 'hamnavbar';
 @import 'form';
 @import 'footer';
 
-
-
-main {
-  background: top / cover no-repeat url(../img/main_bg_bw.jpg) $secondary-color;
-  height: 100vh;
+* {
+    border: 1px black solid;
 }
+/*
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+  background: top / cover no-repeat url(../img/Main_bg_2.jpg);
+  height: 100vh;
+
+  &:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;  
+      background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+      opacity: .7;
+      height: 100%;
+      width: 100%;
+  }
+}
+*/

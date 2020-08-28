@@ -1,18 +1,145 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,700;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: top/cover no-repeat url(../img/Main_bg_2.jpg);
+  height: 100vh;
+}
+main:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+}
+main .banner {
+  display: block;
+  position: relative;
+  margin: 0 15em 0 10em;
+  top: 40%;
+}
+
+h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin: 0;
+  box-shadow: #941320 0 3px;
+  line-height: 1.1em;
+  padding: 0.3em 0;
+}
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  margin: 5px 0;
+}
+
+h3 .two {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+}
+
+.two {
+  font-style: italic;
+  font-family: "Noto Serif", serif;
+  line-height: 0.5em;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    position: relative;
+  }
+  main .banner {
+    display: block;
+    position: relative;
+    margin: 0 5em 0 2.5em;
+    top: 30%;
+  }
+  main h1 {
+    font-family: "Noto Serif", serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0;
+    box-shadow: #941320 0 3px;
+  }
+  main h3 {
+    font-family: "Noto Sans", sans-serif;
+    margin: 5px 0;
+    line-height: 1.2em;
+  }
+  main .two {
+    line-height: 1.2em;
+  }
+}
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.page {
+  width: 60%;
+  margin: 20px auto 0 auto;
+}
+
+h2 {
+  font-family: "Noto Serif", serif;
+  color: #333333;
+  padding: 10px;
+  font-size: 2em;
+  margin: 0 40% 0 10%;
+  border-bottom: #941320 solid 3px;
+}
+
+.info p {
+  font-family: "Noto Sans", sans-serif;
+  color: #333333;
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+contact_wrapper {
+  display: flex;
+}
+
+#contact_wrapper p {
+  border-left: #941320 2px solid;
+  border-bottom: #941320 2px solid;
+  padding: 1em;
+  text-decoration: none;
+  color: #333333;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    width: 90%;
+    margin: 20px auto 0 auto;
+  }
+}
 #closeIcon {
   display: none;
 }
 
 ul {
+  margin: 0;
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  z-index: 99;
 }
 
 ul a {
   display: flex;
-  margin-right: 3em;
+  margin: 2em 3em 0 0;
   background: #333333;
   padding: 0.5em 0.7em;
   box-shadow: 0 3px #941320;
@@ -47,7 +174,7 @@ ul a:hover {
   margin: -40px 0 0 5em;
   transition: all 0.5s ease-in;
 }
-#logo_top:hover {
+#logo_top:hover, #logo_top:active {
   transform: translateY(1em) scale(1.1);
 }
 
@@ -114,7 +241,7 @@ ul a:hover {
    */
   #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(8px, -1px);
+    transform: rotate(45deg) translate(7px, -4px);
     background: #333333;
   }
 
@@ -130,7 +257,7 @@ ul a:hover {
    * Ohyeah and the last one should go the other direction
    */
   #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(2px, 8px);
+    transform: rotate(-45deg) translate(3px, 8px);
   }
 
   /* This is the pop out menu
@@ -144,10 +271,9 @@ ul a:hover {
     align-items: center;
     position: absolute;
     height: 120vh;
-    background: rgba(148, 19, 32, 0.9);
     margin: -5em 0 0 5em;
     width: 20em;
-    padding: 6em 0;
+    padding: 8em 0;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -158,29 +284,31 @@ ul a:hover {
   }
 
   #menu li {
-    margin: 1em;
     align-items: flex-start;
     justify-content: center;
     display: flex;
     font-size: 22px;
+    width: 100%;
   }
 
   #menu a {
     display: flex;
+    border-top: 2px #941320 solid;
+    margin: 0;
     width: 100%;
-    padding: 0.5em;
+    padding: 1em 3em;
     text-transform: uppercase;
     box-shadow: 0 3px #941320;
-    background: #333333;
     font-family: "Noto Sans", sans-serif;
     color: #ebebeb;
-    transition: background 0.5s, transform 0.2s, color 0.5s, box-shadow 0.5s;
+    transition: background 0.5s, transform 0.2s, color 0.5s, box-shadow 0.5s border 0.2s;
   }
-  #menu a:hover {
+  #menu a:hover, #menu a:active {
     background: #ebebeb;
     color: #333333;
     box-shadow: 0 3px gold;
     transform: translateY(0.2em);
+    border: none;
   }
 
   /*
@@ -188,96 +316,6 @@ ul a:hover {
    */
   #menuToggle input:checked ~ ul {
     transform: translate(-100%, 0);
-  }
-}
-main {
-  position: relative;
-}
-main .banner {
-  display: block;
-  position: relative;
-  margin: 0 15em 0 10em;
-  top: 40%;
-}
-main h1 {
-  font-family: "Noto Serif", serif;
-  font-size: 3em;
-  text-transform: uppercase;
-  margin: 0;
-  box-shadow: #941320 0 3px;
-}
-main h3 {
-  font-family: "Noto Sans", sans-serif;
-  margin: 5px 0;
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    position: relative;
-  }
-  main .banner {
-    display: block;
-    position: relative;
-    margin: 0 5em 0 2.5em;
-    top: 40%;
-  }
-  main h1 {
-    font-family: "Noto Serif", serif;
-    font-size: 3em;
-    text-transform: uppercase;
-    margin: 0;
-    box-shadow: #941320 0 3px;
-  }
-  main h3 {
-    font-family: "Noto Sans", sans-serif;
-    margin: 5px 0;
-  }
-}
-.all {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-}
-
-.page {
-  width: 60%;
-  margin: 20px auto 0 auto;
-}
-
-h2 {
-  font-family: "Noto Serif", serif;
-  color: #333333;
-  padding: 10px;
-  font-size: 2em;
-  margin: 0 40% 0 10%;
-  border-bottom: #941320 solid 3px;
-}
-
-.info p {
-  font-family: "Noto Sans", sans-serif;
-  color: #333333;
-  font-size: 1.1em;
-  line-height: 1.8em;
-}
-
-contact_wrapper {
-  display: flex;
-}
-
-#contact_wrapper p {
-  border-left: #941320 2px solid;
-  border-bottom: #941320 2px solid;
-  padding: 1em;
-  text-decoration: none;
-  color: #333333;
-  max-width: 50%;
-}
-
-@media screen and (max-width: 768px) {
-  .page {
-    width: 90%;
-    margin: 20px auto 0 auto;
   }
 }
 form {
@@ -293,7 +331,7 @@ form label {
   text-transform: uppercase;
   display: flex;
   flex-flow: column;
-  width: 60%;
+  width: 70%;
   padding: 2em 0 0 0;
 }
 form .form_input_area {
@@ -301,8 +339,13 @@ form .form_input_area {
   background: #ebebeb;
   border: solid 1px #333333;
   opacity: 70%;
+  box-shadow: inset 1px 1px 3px;
+  padding: 10px;
 }
 form button {
+  padding: 0;
+  border: none;
+  background: none;
   background: #941320;
   padding: 0.7em;
   width: 30%;
@@ -318,6 +361,9 @@ form button {
 form button:hover {
   background: rgba(148, 19, 32, 0.5);
   transform: translateY(0.2em);
+}
+form button:hover:active {
+  transform: translateY(-0.2em);
 }
 
 @media screen and (max-width: 768px) {
@@ -406,12 +452,28 @@ a, p {
   }
 }
 * {
-  border: 1px solid black;
+  border: 1px black solid;
 }
 
+/*
 main {
-  background: top/cover no-repeat url(../img/main_bg_bw.jpg) #941320;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+  background: top / cover no-repeat url(../img/Main_bg_2.jpg);
   height: 100vh;
+
+  &:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;  
+      background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+      opacity: .7;
+      height: 100%;
+      width: 100%;
+  }
 }
+*/
 
 /*# sourceMappingURL=styles.css.map */

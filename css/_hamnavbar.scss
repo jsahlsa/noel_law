@@ -1,17 +1,22 @@
 
+
+
 #closeIcon {
   display: none;
+  
 }
 
 ul {
+    margin: 0;
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  z-index: 99;
 }
 
 ul a {
   display: flex;
-  margin-right: 3em;
+  margin: 2em 3em 0 0;
   background: $dark-gray;
   padding: .5em .7em;
   box-shadow: 0 3px $secondary-color;
@@ -21,6 +26,7 @@ ul a {
   font-family: $body-font;
   color: $light-gray;
   transition: background 1s, color .5s, box-shadow .5s, transform .2s;
+
 
   &:hover {
     background: $light-gray;
@@ -46,7 +52,7 @@ ul a {
   margin: -40px 0 0 5em;
   transition: all .5s ease-in;
 
-&:hover {
+&:hover, &:active {
   transform: translateY(1em) scale(1.1);
 }
 }
@@ -136,7 +142,7 @@ ul a {
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(8px, -1px);
+  transform: rotate(45deg) translate(7px,-4px);
   background: $dark-gray;
 
 }
@@ -155,7 +161,7 @@ ul a {
  */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(2px, 8px);
+  transform: rotate(-45deg) translate(3px, 8px);
 }
 
 /* This is the pop out menu
@@ -170,11 +176,10 @@ ul a {
   align-items: center;
   position: absolute;
   height: 120vh;
-  background: $secondary-color-light-opaque;
   margin: -5em 0 0 5em;
 
   width: 20em;
-  padding: 6em 0;
+  padding: 8em 0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -188,29 +193,31 @@ ul a {
 
 #menu li
 {
-  margin: 1em;
   align-items: flex-start;
   justify-content: center;
   display: flex;
   font-size: 22px;
+  width: 100%;
 }
 
 #menu a {
   display: flex;
+  border-top: 2px $secondary-color solid;
+  margin: 0;
   width: 100%;
-  padding: .5em;
+  padding: 1em 3em;
   text-transform: uppercase;
   box-shadow: 0 3px $secondary-color;
-  background: $dark-gray;
   font-family: $body-font;
   color: $light-gray;
-  transition: background .5s, transform .2s, color .5s, box-shadow .5s;
+  transition: background .5s, transform .2s, color .5s, box-shadow .5s border .2s;
 
-  &:hover {
+  &:hover, &:active {
     background: $light-gray;
     color: $dark-gray;
     box-shadow: 0 3px gold;
     transform: translateY(.2em);
+    border: none;
   }
 }
 

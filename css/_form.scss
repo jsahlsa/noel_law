@@ -11,7 +11,7 @@ form {
         text-transform: uppercase;
         display: flex;
         flex-flow: column;
-        width: 60%;
+        width: 70%;
         padding: 2em 0 0 0;
 
     }
@@ -23,9 +23,14 @@ form {
         background: $light-gray;
         border: solid 1px $dark-gray;
         opacity: 70%;
+        box-shadow: inset 1px 1px 3px;
+        padding: 10px;
     }
 
     button {
+        padding: 0;
+        border: none;
+        background: none;
         background: $secondary-color;
         padding: .7em;
         width: 30%;
@@ -41,6 +46,10 @@ form {
         &:hover {
             background: $secondary-color-light;
             transform: translateY(.2em);
+
+        &:active {
+            transform: translateY(-.2em)
+        }
     }
 }
 }
