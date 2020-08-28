@@ -16,9 +16,7 @@ $body-font: 'Noto Sans', sans-serif;
 @import 'form';
 @import 'footer';
 
-* {
-  border: 1px solid black;
-}
+
 
 main {
   background: top / cover no-repeat url(../img/main_bg_bw.jpg) $secondary-color;
