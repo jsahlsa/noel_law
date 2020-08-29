@@ -360,6 +360,7 @@ form button {
   font-family: "Noto Sans", sans-serif;
   color: #ebebeb;
   margin: 1em 0 0 0;
+  cursor: pointer;
 }
 form button:hover {
   background: rgba(148, 19, 32, 0.5);
