@@ -2,19 +2,25 @@ main {
   position: relative;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;        
+  box-sizing: border-box;
   background: top / cover no-repeat url(../img/Main_bg_2.jpg);
   height: 100vh;
+  z-index: 1;
 
-  &:before {
+
+  &:after {
       content: " ";
       position: absolute;
       top: 0;
-      left: 0;  
+      left: 0;
       background-image: linear-gradient(120deg, #eaee44, #33d0ff);
       opacity: .7;
       height: 100%;
       width: 100%;
+      z-index: -3;
+  }
+
+
   }
   .banner {
     display: block;
@@ -22,11 +28,13 @@ main {
     margin: 0 15em 0 10em;
     top: 40%;
   }
-  
 
-  
-}
-  
+
+
+
+
+
+
   h1 {
     font-family: $header-font;
     font-size: 3em;

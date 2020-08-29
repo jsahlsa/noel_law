@@ -1,17 +1,16 @@
 
 
-
 #closeIcon {
   display: none;
-  
+
 }
 
 ul {
-    margin: 0;
+  margin: 0;
+  position: relative;
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  z-index: 99;
 }
 
 ul a {
