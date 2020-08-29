@@ -5,11 +5,12 @@ $primary-color: #333;
 $secondary-color: #941320;
 $secondary-color-light: rgba(148, 19, 32, .5);
 $secondary-color-light-opaque:rgba(148, 19, 32, .9);
-$light-gray: #ebebeb;
+$light-light-gray: #ebebeb;
+$light-gray: #d6d6d6;
 $dark-gray: #333333;
 $header-font: 'Noto Serif', serif;
 $body-font: 'Noto Sans', sans-serif;
- 
+
 
 @import 'home';
 @import 'items';
@@ -18,13 +19,13 @@ $body-font: 'Noto Sans', sans-serif;
 @import 'footer';
 
 * {
-    border: 1px black solid;
+    //border: 1px black solid;
 }
 /*
 main {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;        
+    box-sizing: border-box;
   background: top / cover no-repeat url(../img/Main_bg_2.jpg);
   height: 100vh;
 
@@ -32,7 +33,7 @@ main {
       content: " ";
       position: absolute;
       top: 0;
-      left: 0;  
+      left: 0;
       background-image: linear-gradient(120deg, #eaee44, #33d0ff);
       opacity: .7;
       height: 100%;

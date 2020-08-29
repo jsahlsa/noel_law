@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,700;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+body {
+  background: #d6d6d6;
+}
+
 main {
   position: relative;
   margin: 0;
@@ -30,28 +34,27 @@ main:after {
 
 h1 {
   font-family: "Noto Serif", serif;
+  color: #333333;
   font-size: 3em;
   text-transform: uppercase;
   margin: 0;
   box-shadow: #941320 0 3px;
   line-height: 1.1em;
   padding: 0.3em 0;
+  text-shadow: 3px 3px 10px;
 }
 
 h3 {
   font-family: "Noto Sans", sans-serif;
+  color: #333333;
   margin: 5px 0;
-}
-
-h3 .two {
-  font-family: "Noto Serif", serif;
-  font-style: italic;
 }
 
 .two {
   font-style: italic;
+  color: #333333;
   font-family: "Noto Serif", serif;
-  line-height: 0.5em;
+  line-height: 1em;
   font-size: 1em;
 }
 
@@ -95,11 +98,12 @@ h3 .two {
 
 h2 {
   font-family: "Noto Serif", serif;
+  font-style: italic;
   color: #333333;
   padding: 10px;
   font-size: 2em;
   margin: 0 40% 0 10%;
-  border-bottom: #941320 solid 3px;
+  box-shadow: 0 5px #941320;
 }
 
 .info p {
@@ -120,6 +124,17 @@ contact_wrapper {
   text-decoration: none;
   color: #333333;
   max-width: 50%;
+}
+
+.list {
+  display: flex;
+  flex-flow: column;
+  list-style: inside;
+  font-family: "Noto Sans", sans-serif;
+  color: #333333;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -144,17 +159,18 @@ ul a {
   display: flex;
   margin: 2em 3em 0 0;
   background: #333333;
-  padding: 0.5em 0.7em;
+  padding: 0.5em 1.5em;
   box-shadow: 0 3px #941320;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-decoration: none;
+  font-size: 0.8em;
   font-family: "Noto Sans", sans-serif;
-  color: #ebebeb;
+  color: #d6d6d6;
   transition: background 1s, color 0.5s, box-shadow 0.5s, transform 0.2s;
 }
 ul a:hover {
-  background: #ebebeb;
+  background: #d6d6d6;
   color: #333333;
   box-shadow: 0 3px gold;
   transform: translateY(0.2em);
@@ -165,7 +181,7 @@ ul a:hover {
 }
 
 .st1 {
-  fill: #ebebeb;
+  fill: #d6d6d6;
 }
 
 #logo_top {
@@ -220,7 +236,7 @@ ul a:hover {
   #menuToggle span {
     display: block;
     width: 33px;
-    height: 4px;
+    height: 6px;
     margin-bottom: 5px;
     position: relative;
     background: #941320;
@@ -244,7 +260,7 @@ ul a:hover {
    */
   #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(7px, -4px);
+    transform: rotate(45deg) translate(3px, 2px);
     background: #333333;
   }
 
@@ -260,7 +276,7 @@ ul a:hover {
    * Ohyeah and the last one should go the other direction
    */
   #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(3px, 8px);
+    transform: rotate(-45deg) translate(1px, 2px);
   }
 
   /* This is the pop out menu
@@ -303,11 +319,11 @@ ul a:hover {
     text-transform: uppercase;
     box-shadow: 0 3px #941320;
     font-family: "Noto Sans", sans-serif;
-    color: #ebebeb;
+    color: #d6d6d6;
     transition: background 0.5s, transform 0.2s, color 0.5s, box-shadow 0.5s border 0.2s;
   }
   #menu a:hover, #menu a:active {
-    background: #ebebeb;
+    background: #d6d6d6;
     color: #333333;
     box-shadow: 0 3px gold;
     transform: translateY(0.2em);
@@ -358,7 +374,7 @@ form button {
   transition: transform 0.2s, background 0.5s, box-shadow 0.5s;
   text-transform: uppercase;
   font-family: "Noto Sans", sans-serif;
-  color: #ebebeb;
+  color: #d6d6d6;
   margin: 1em 0 0 0;
   cursor: pointer;
 }
@@ -402,7 +418,7 @@ footer {
 a, p {
   text-decoration: none;
   font-family: "Noto Sans", sans-serif;
-  color: #ebebeb;
+  color: #d6d6d6;
 }
 
 .footer_links {
@@ -455,15 +471,11 @@ a, p {
     width: 40%;
   }
 }
-* {
-  border: 1px black solid;
-}
-
 /*
 main {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;        
+    box-sizing: border-box;
   background: top / cover no-repeat url(../img/Main_bg_2.jpg);
   height: 100vh;
 
@@ -471,7 +483,7 @@ main {
       content: " ";
       position: absolute;
       top: 0;
-      left: 0;  
+      left: 0;
       background-image: linear-gradient(120deg, #eaee44, #33d0ff);
       opacity: .7;
       height: 100%;

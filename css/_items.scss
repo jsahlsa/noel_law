@@ -13,11 +13,12 @@
 
 h2 {
   font-family: $header-font;
+  font-style: italic;
   color: $dark-gray;
   padding: 10px;
   font-size: 2em;
   margin: 0 40% 0 10%;
-  border-bottom: $secondary-color solid 3px;
+  box-shadow: 0 5px $secondary-color;
   //box-shadow: inset 2px -2px 2px $primary-color;
 }
 
@@ -39,6 +40,17 @@ contact_wrapper {
   text-decoration: none;
   color: $dark-gray;
   max-width: 50%;
+}
+
+.list {
+  display: flex;
+  flex-flow: column;
+  list-style: inside;
+  font-family: $body-font;
+  color: $dark-gray;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 1.5em;
 }
 
 

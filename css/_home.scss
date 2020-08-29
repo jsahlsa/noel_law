@@ -1,3 +1,7 @@
+body {
+  background: $light-gray;
+}
+
 main {
   position: relative;
   margin: 0;
@@ -37,28 +41,29 @@ main {
 
   h1 {
     font-family: $header-font;
+    color: $dark-gray;
     font-size: 3em;
     text-transform: uppercase;
     margin: 0;
     box-shadow: $secondary-color 0 3px;
     line-height: 1.1em;
     padding: .3em 0;
+    text-shadow: 3px 3px 10px;
   }
   h3 {
     font-family: $body-font;
+    color: $dark-gray;
     margin: 5px 0;
   }
-    h3 .two {
-      font-family: $header-font;
-      font-style: italic;
-  }
+
 
 
  .two {
      font-style: italic;
+     color: $dark-gray;
      font-family: $header-font;
-     line-height: .5em;
-     font-size: 1em
+     line-height: 1em;
+     font-size: 1em;
  }
 
 //smaller screens

@@ -17,11 +17,12 @@ ul a {
   display: flex;
   margin: 2em 3em 0 0;
   background: $dark-gray;
-  padding: .5em .7em;
+  padding: .5em 1.5em;
   box-shadow: 0 3px $secondary-color;
   text-transform: uppercase;
   letter-spacing: .1em;
   text-decoration: none;
+  font-size: .8em;
   font-family: $body-font;
   color: $light-gray;
   transition: background 1s, color .5s, box-shadow .5s, transform .2s;
@@ -108,7 +109,7 @@ ul a {
 {
   display: block;
   width: 33px;
-  height: 4px;
+  height: 6px;
   margin-bottom: 5px;
   position: relative;
 
@@ -141,7 +142,7 @@ ul a {
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(7px,-4px);
+  transform: rotate(45deg) translate(3px,2px);
   background: $dark-gray;
 
 }
@@ -160,7 +161,7 @@ ul a {
  */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(3px, 8px);
+  transform: rotate(-45deg) translate(1px, 2px);
 }
 
 /* This is the pop out menu
