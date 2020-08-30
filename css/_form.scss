@@ -36,7 +36,7 @@ form {
         width: 30%;
         margin-bottom: .6em;
         border-radius: 10px;
-        box-shadow: inset 1px 1px 1px $dark-gray;
+        box-shadow: inset 1px 1px 3px $dark-gray;
         transition: transform .2s, background .5s, box-shadow .5s;
         text-transform: uppercase;
         font-family: $body-font;
@@ -45,7 +45,7 @@ form {
         cursor: pointer;
 
         &:hover {
-            background: $secondary-color-light;
+            background: $secondary-color-light-opaque;
             transform: translateY(.2em);
 
         &:active {

@@ -54,7 +54,7 @@ a, p {
   padding: .7em;
   margin-bottom: .6em;
   border-radius: 10px;
-  box-shadow: inset 1px 1px 1px $dark-gray;
+  box-shadow: inset 1px 1px 3px $dark-gray;
   transition: transform .2s, background .5s, box-shadow .5s;
   text-transform: uppercase;
 
@@ -68,17 +68,19 @@ a, p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   footer {
     flex-flow: column;
     padding-top: 20px;
   }
+
+
 
   .footer_div {
     padding: 2em;
   }
 
   #logo_footer_wrapper {
-    width: 40%;
+    width: 5em;
   }
 }
