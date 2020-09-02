@@ -7,6 +7,7 @@
 
 .page {
   width: 60%;
+  max-width: 900px;
   margin: 20px auto 0 auto;
 }
 
@@ -14,9 +15,10 @@ h2 {
   font-family: $header-font;
   font-style: italic;
   color: $dark-gray;
-  padding: 3px;
+  padding: 3px 3px 3px 1em;
+  width: 7em;
   font-size: 2em;
-  margin: 0 40% 0 10%;
+  margin: 0 1em;
   box-shadow: 0 3px $secondary-color;
   //box-shadow: inset 2px -2px 2px $primary-color;
 }
