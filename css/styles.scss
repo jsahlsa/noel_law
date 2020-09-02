@@ -1,26 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 $primary-color: #333;
 $secondary-color: #941320;
-$secondary-color-light: rgba(148, 19, 32, .5);
-$secondary-color-light-opaque:rgba(148, 19, 32, .9);
-$secondary-color-light-light: rgba(148, 19, 32, .05);
+$secondary-color-light: rgba(148, 19, 32, 0.5);
+$secondary-color-light-opaque: rgba(148, 19, 32, 0.9);
+$secondary-color-light-light: rgba(148, 19, 32, 0.05);
 $light-light-gray: #ebebeb;
 $light-gray: #d6d6d6;
 $dark-gray: #333333;
-$header-font: 'Noto Serif', serif;
-$body-font: 'Noto Sans', sans-serif;
+$header-font: "Noto Serif", serif;
+$body-font: "Noto Sans", sans-serif;
 
-
-@import 'home';
-@import 'items';
-@import 'hamnavbar';
-@import 'form';
-@import 'footer';
+@import "home";
+@import "items";
+@import "hamnavbar";
+@import "form";
+@import "footer";
 
 * {
-    //border: 1px black solid;
+  //border: 1px black solid;
 }
 /*
 main {

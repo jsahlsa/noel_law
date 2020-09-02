@@ -214,7 +214,8 @@ ul a:hover {
   margin: -40px 0 0 5em;
   transition: all 0.5s ease-in;
 }
-#logo_top:hover, #logo_top:active {
+#logo_top:hover,
+#logo_top:active {
   transform: translateY(1em) scale(1.1);
 }
 
@@ -264,7 +265,8 @@ ul a:hover {
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   #menuToggle span:first-child {
@@ -341,9 +343,11 @@ ul a:hover {
     box-shadow: 0 3px #941320;
     font-family: "Noto Sans", sans-serif;
     color: #d6d6d6;
-    transition: background 0.5s, transform 0.2s, color 0.5s, box-shadow 0.5s border 0.2s;
+    transition: background 0.5s, transform 0.2s, color 0.5s,
+      box-shadow 0.5s border 0.2s;
   }
-  #menu a:hover, #menu a:active {
+  #menu a:hover,
+  #menu a:active {
     background: #d6d6d6;
     color: #333333;
     box-shadow: 0 3px gold;
@@ -436,7 +440,8 @@ footer {
   fill: white;
 }
 
-a, p {
+a,
+p {
   text-decoration: none;
   font-family: "Noto Sans", sans-serif;
   color: #d6d6d6;
