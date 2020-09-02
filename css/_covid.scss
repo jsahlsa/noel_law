@@ -1,0 +1,17 @@
+.covid_banner {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+    z-index: 99;
+
+    h4 {
+        color: $light-gray;
+        font-family: $body-font;
+        padding: 10px;
+        text-align: center;
+    }
+}
