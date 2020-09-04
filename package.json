@@ -1,0 +1,30 @@
+{
+    "name": "noel_law",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "doc": "doc"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "parcel build index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://jsahlsa@github.com/jsahlsa/noel_law.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jsahlsa/noel_law/issues"
+    },
+    "homepage": "https://github.com/jsahlsa/noel_law#readme",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "^2.1.1",
+        "sass": "^1.26.10"
+    }
+}
