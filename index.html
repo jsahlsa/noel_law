@@ -310,16 +310,16 @@ solution = unset credentials locally and globally -->
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-177061207-1", "auto");
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
-    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177061207-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177061207-1');
+</script>
+
     <script
       src="https://www.google-analytics.com/analytics.js"
       async
